@@ -114,3 +114,35 @@
     background: $blue-light;
   }
 }
+
+// ─── Category nav items (ActivitiesTab) ───────────────────────────────────────
+
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  padding: 9px $space-4;
+  font-size: 13px;
+  font-weight: 500;
+  font-family: $font-base;
+  color: $ink-2;
+  background: none;
+  border: none;
+  border-right: 3px solid transparent;
+  cursor: pointer;
+  text-align: right;
+  transition: background 0.12s;
+
+  &:hover {
+    background: $pink-light;
+    color: $purple;
+  }
+
+  &.active {
+    background: $pink-light;
+    color: $purple;
+    font-weight: 700;
+    border-right-color: $pink;
+  }
+}

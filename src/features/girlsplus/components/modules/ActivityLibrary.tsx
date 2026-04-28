@@ -51,14 +51,14 @@ const CATEGORIES: Category[] = [
 ];
 
 export const ActivityLibrary: React.FC = () => {
-  const { setModule } = useCourse();
-  const [activeCategory, setActiveCategory] = useState<string>('intro');
+  const { state, setModule, setCategory } = useCourse();
+  const activeCategory = state.activeCategory || 'intro';
   const [showForm, setShowForm] = useState(false);
 
-  const currentCategory = CATEGORIES.find((c) => c.id === activeCategory)!;
-  const categoryActivities = currentCategory.ids
-    .map((id) => activities[id])
-    .filter(Boolean);
+  const currentCategory = CATEGORIES.find((c) => c.id === activeCategory);
+  const categoryActivities = currentCategory
+    ? currentCategory.ids.map((id) => activities[id]).filter(Boolean)
+    : CATEGORIES.flatMap((c) => c.ids.map((id) => activities[id])).filter(Boolean);
 
   return (
     <div dir="rtl">
@@ -80,7 +80,7 @@ export const ActivityLibrary: React.FC = () => {
                 styles.filterBtn,
                 activeCategory === cat.id ? styles.active : '',
               ].join(' ')}
-              onClick={() => setActiveCategory(cat.id)}
+              onClick={() => setCategory(cat.id)}
             >
               {cat.label}
               <span className={styles.count}>{cat.ids.length}</span>
@@ -89,7 +89,7 @@ export const ActivityLibrary: React.FC = () => {
         </div>
 
         {/* Intro text for icebreakers */}
-        {activeCategory === 'intro' && (
+        {activeCategory === 'intro' && currentCategory && (
           <div className={styles.categoryIntro}>
             <h3 className={styles.introTitle}>על תהליך גיבוש הקבוצה</h3>
             <p className={styles.introText}>

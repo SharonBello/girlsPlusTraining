@@ -4,6 +4,7 @@ import type { CourseState, CourseAction, TabId, ModuleId } from '../data/types';
 const initialState: CourseState = {
   activeTab: 'mentors',
   activeModule: 'welcome',
+  activeCategory: 'intro',
   completedModules: new Set(),
   openSessions: new Set(),
   quizAnswers: {},
@@ -13,28 +14,19 @@ function courseReducer(state: CourseState, action: CourseAction): CourseState {
   switch (action.type) {
     case 'SET_TAB':
       return { ...state, activeTab: action.tab };
-
     case 'SET_MODULE':
       return { ...state, activeModule: action.module };
-
+    case 'SET_CATEGORY':
+      return { ...state, activeCategory: action.category };
     case 'COMPLETE_MODULE':
-      return {
-        ...state,
-        completedModules: new Set([...state.completedModules, action.module]),
-      };
-
+      return { ...state, completedModules: new Set([...state.completedModules, action.module]) };
     case 'TOGGLE_SESSION': {
       const next = new Set(state.openSessions);
       next.has(action.sessionId) ? next.delete(action.sessionId) : next.add(action.sessionId);
       return { ...state, openSessions: next };
     }
-
     case 'ANSWER_QUIZ':
-      return {
-        ...state,
-        quizAnswers: { ...state.quizAnswers, [action.questionId]: action.answerIndex },
-      };
-
+      return { ...state, quizAnswers: { ...state.quizAnswers, [action.questionId]: action.answerIndex } };
     default:
       return state;
   }
@@ -59,6 +51,11 @@ export function useCourseState() {
     []
   );
 
+  const setCategory = useCallback(
+    (category: string) => dispatch({ type: 'SET_CATEGORY', category }),
+    []
+  );
+
   const quizScore = Object.entries(state.quizAnswers).filter(
     ([, v]) => v !== null
   ).length;
@@ -72,6 +69,7 @@ export function useCourseState() {
     state,
     setTab,
     setModule,
+    setCategory,
     completeModule,
     toggleSession,
     answerQuiz,

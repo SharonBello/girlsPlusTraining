@@ -117,6 +117,7 @@ export interface ScholarModule {
 export interface CourseState {
   activeTab: TabId;
   activeModule: ModuleId;
+  activeCategory: string;
   completedModules: Set<ModuleId>;
   openSessions: Set<number>;
   quizAnswers: Record<string, number | null>;
@@ -125,6 +126,7 @@ export interface CourseState {
 export type CourseAction =
   | { type: 'SET_TAB'; tab: TabId }
   | { type: 'SET_MODULE'; module: ModuleId }
+  | { type: 'SET_CATEGORY'; category: string }
   | { type: 'COMPLETE_MODULE'; module: ModuleId }
   | { type: 'TOGGLE_SESSION'; sessionId: number }
   | { type: 'ANSWER_QUIZ'; questionId: string; answerIndex: number };
