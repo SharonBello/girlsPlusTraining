@@ -102,6 +102,7 @@ export interface ScholarLesson {
   content: string;
   linkUrl?: string;
   linkLabel?: string;
+  resources?: Resource[];
 }
 
 export interface ScholarModule {

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import styles from './Module.module.scss';
 import { ModuleHeader } from '../ui/ModuleHeader';
+import { ResourceCard } from '../ui/ResourceCard';
 import { scholarModules } from '../../data/scholars';
 import { useCourse } from '../../hooks/useCourse';
 import type { ScholarModuleId } from '../../data/types';
@@ -72,6 +73,14 @@ export const ScholarsModule: React.FC<Props> = ({ moduleId }) => {
                   >
                     {lesson.linkLabel ?? 'למידע נוסף ←'}
                   </a>
+                )}
+                {lesson.resources && lesson.resources.length > 0 && (
+                  <div className={styles.lessonResources}>
+                    <div className={styles.lessonResourcesLabel}>📎 חומרים נלווים</div>
+                    {lesson.resources.map(res => (
+                      <ResourceCard key={res.id} resource={res} />
+                    ))}
+                  </div>
                 )}
               </div>
             )}

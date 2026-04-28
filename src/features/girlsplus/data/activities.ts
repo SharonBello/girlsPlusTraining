@@ -1,4 +1,13 @@
 import type { Activity } from './types';
+import {
+  RESOURCE_INTRO_PPTX, RESOURCE_BRAINSTORM_GUIDE,
+  RESOURCE_WHY_METHOD_PDF, RESOURCE_EMPATHY_MAP_PDF,
+  RESOURCE_USER_JOURNEY_PDF, RESOURCE_SCAMPER_PDF,
+  RESOURCE_DOT_VOTING_PDF, RESOURCE_STAKEHOLDER_PDF,
+  RESOURCE_MVP_PPTX, RESOURCE_PROBLEM_FLOW_DOC,
+  RESOURCE_MARKET_RESEARCH_PDF, RESOURCE_PROBLEM_RESEARCH_DOC,
+  RESOURCE_PROBLEM_STATEMENT_DOC,
+} from './resources';
 
 
 export const activities: Record<string, Activity> = {
@@ -107,6 +116,7 @@ export const activities: Record<string, Activity> = {
       'הפצת השאלון לקהילה (גוגל פורמס / נייר)',
     ],
     facilitationTip: 'הסקר יצא הביתה. וודאי שהנערות מפיצות אותו לפחות ל-10 אנשים.',
+    resources: [RESOURCE_MARKET_RESEARCH_PDF],
   },
 
   'survey-analysis': {
@@ -336,6 +346,7 @@ export const activities: Record<string, Activity> = {
       'המשך אופציונלי — סבבים עם שאלות נוספות',
     ],
     facilitationTip: 'שאלות המשך: מה את יכולה לתרום לקבוצה? אם היית טעם גלידה, מה היית? איזו חיה אהובה עלייך? אם היית פרי, מה היית?',
+    resources: [RESOURCE_INTRO_PPTX],
   },
 
   'intro-selfie': {
@@ -462,6 +473,7 @@ export const activities: Record<string, Activity> = {
       'בודקים: האם עכשיו יש לנו בעיה ניתנת לפתרון?',
     ],
     facilitationTip: 'אם הנערות מגיעות ל"כי זה ככה" — זהו סימן שהגענו לשורש. שאלו: "ומה אפשר לעשות עם זה?"',
+    resources: [RESOURCE_WHY_METHOD_PDF],
   },
 
   'fishbone': {
@@ -501,6 +513,7 @@ export const activities: Record<string, Activity> = {
       'מוסיפות: כאבים (מה מקשה עליה) ורווחים (מה היא רוצה להשיג)',
     ],
     facilitationTip: 'פעילות מצוינת לפני כתיבת סקר — עוזרת לנסח שאלות טובות יותר.',
+    resources: [RESOURCE_EMPATHY_MAP_PDF],
   },
 
   'user-journey-mapping': {
@@ -519,6 +532,7 @@ export const activities: Record<string, Activity> = {
       'שלב 5: זיהוי הזדמנות — באיזה שלב האפליקציה שלנו יכולה להיכנס?',
     ],
     facilitationTip: 'שימי דגש על שלב 5 — זה בדיוק המקום שבו הפתרון הטכנולוגי שלהן יכנס.',
+    resources: [RESOURCE_USER_JOURNEY_PDF],
   },
 
   'scamper': {
@@ -538,6 +552,7 @@ export const activities: Record<string, Activity> = {
       'R — Rearrange/Reverse (לסדר מחדש): מה אפשר להפוך? לשנות סדר?',
     ],
     facilitationTip: 'עובדת מצוין לאחר שכבר יש רעיון — עוזרת לפתח ולשפר אותו. תנו לנערות לעבוד בקבוצות קטנות ולשתף.',
+    resources: [RESOURCE_SCAMPER_PDF],
   },
 
   'swot': {
@@ -575,6 +590,7 @@ export const activities: Record<string, Activity> = {
       'סופרים — הפריטים עם הכי הרבה מדבקות עולים לדיון',
     ],
     facilitationTip: 'שיטה מצוינת לצמצום רשימה ארוכה. מבטיחה שכולן נשמעות — גם הנערות השקטות.',
+    resources: [RESOURCE_DOT_VOTING_PDF],
   },
 
   'mind-mapping': {
@@ -630,6 +646,7 @@ export const activities: Record<string, Activity> = {
       'שלב 5: זיהוי בעלי העניין הקריטיים לפתרון שלנו',
     ],
     facilitationTip: 'Stakeholder Analysis מצוינת לפני שמתחילות לתכנן — עוזרת להבין מי צריך להסכים, מי יעזור ומי עלול להתנגד.',
+    resources: [RESOURCE_STAKEHOLDER_PDF],
   },
 
   'problem-statement': {
@@ -647,6 +664,7 @@ export const activities: Record<string, Activity> = {
       'שלב 5 — שלבי את ארבע התשובות לניסוח אחד שלם',
     ],
     facilitationTip: 'חשוב: בשלב זה לא מציעים פתרונות — רק מגדירים את הבעיה. Problem Statement ברור = פתרון טוב יותר.',
+    resources: [RESOURCE_PROBLEM_STATEMENT_DOC, RESOURCE_PROBLEM_RESEARCH_DOC],
   },
 
 
