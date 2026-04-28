@@ -1,4 +1,4 @@
-@use '../../styles/variables' as *;
+@use "../../styles/variables" as *;
 
 .sidebar {
   width: $sidebar-width;
@@ -9,4 +9,16 @@
   flex-direction: column;
   height: 100%;
   overflow: hidden;
+}
+
+@media (max-width: 750px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    overflow: visible;
+    border-inline-start: none;
+    border-bottom: 1px solid var(--border, #ede8f5);
+    max-height: 280px; // cap sidebar height so content stays visible
+    overflow-y: auto;
+  }
 }

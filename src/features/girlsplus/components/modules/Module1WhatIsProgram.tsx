@@ -89,7 +89,7 @@ export const Module1WhatIsProgram: React.FC = () => {
               <div className={styles.phaseSessions}>
                 {phase.sessions.map((s) => (
                   <div key={s} className={styles.phaseSession}>
-                    → {s}
+                    ← {s}
                   </div>
                 ))}
               </div>

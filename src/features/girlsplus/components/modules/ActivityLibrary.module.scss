@@ -1,4 +1,4 @@
-@use '../../styles/variables' as *;
+@use "../../styles/variables" as *;
 
 .body {
   padding: $space-5 $space-8;
@@ -102,10 +102,14 @@
 // ─── Activities grid ──────────────────────────────────────────────────────────
 
 .activitiesGrid {
-  display: flex;
-  flex-direction: column;
-  gap: $space-2;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: $space-4;
   margin-bottom: $space-6;
+
+  @media (max-width: 600px) {
+    grid-template-columns: 1fr;
+  }
 }
 
 // ─── Add activity section ─────────────────────────────────────────────────────
@@ -127,7 +131,8 @@
   }
 }
 
-.addHeader {}
+.addHeader {
+}
 
 .addTitle {
   font-size: 15px;

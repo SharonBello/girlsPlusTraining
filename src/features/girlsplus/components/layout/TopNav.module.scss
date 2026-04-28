@@ -1,4 +1,4 @@
-@use '../../styles/variables' as *;
+@use "../../styles/variables" as *;
 
 .nav {
   position: fixed;
@@ -70,4 +70,18 @@
 .label {
   font-size: 12px;
   color: rgba($white, 0.75);
+}
+
+@media (max-width: 750px) {
+  .nav {
+    padding: 0 $space-4;
+  }
+
+  .tag {
+    display: none; // hide subtitle on mobile to save space
+  }
+
+  .label {
+    display: none;
+  }
 }

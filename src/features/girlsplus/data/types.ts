@@ -1,3 +1,15 @@
+export type ResourceType = 'pdf' | 'slides' | 'doc' | 'image' | 'video';
+
+export interface Resource {
+  id: string;
+  title: string;
+  type: ResourceType;
+  driveId?: string;       // Google Drive file ID — for pdf/image/pptx viewer
+  embedUrl?: string;      // full embed URL — for Google Slides published embed
+  downloadUrl?: string;   // direct download link
+  description?: string;
+}
+
 // ─── Course navigation ───────────────────────────────────────────────────────
 
 export type TabId = 'mentors' | 'scholars' | 'activities';
@@ -12,6 +24,7 @@ export type ModuleId =
   | 'app-inventor'
   | 'coding-basics'
   | 'activity-library'
+  | 'session-timeline'
   | 'completion';
 
 // ─── Activities ──────────────────────────────────────────────────────────────
@@ -30,13 +43,15 @@ export interface Activity {
   id: string;
   name: string;
   description: string;
-  duration: number; // minutes
+  duration: number;
   category: ActivityCategory;
+  imageUrl?: string;        // ← Unsplash or other image for card header
   materials?: string[];
   steps?: string[];
   facilitationTip?: string;
   linkUrl?: string;
   linkLabel?: string;
+  resources?: Resource[];
 }
 
 // ─── Sessions ────────────────────────────────────────────────────────────────

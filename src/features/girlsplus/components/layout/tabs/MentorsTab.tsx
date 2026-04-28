@@ -4,11 +4,16 @@ import { SidebarNavItem } from '../SidebarNavItem';
 import { useCourse } from '../../../hooks/useCourse';
 import type { ModuleId } from '../../../data/types';
 
-const MODULES: { id: ModuleId; label: string; num: number }[] = [
+const MODULES: { id: ModuleId; label: string; num: number | string }[] = [
   { id: 'what-is-program', label: 'מהי התכנית?', num: 1 },
   { id: 'mentor-role', label: 'תפקיד המנטורית', num: 2 },
   { id: 'sessions', label: '10 המפגשים', num: 3 },
   { id: 'quiz', label: 'בחינת הידע', num: 4 },
+];
+
+const TOOLS: { id: ModuleId; label: string }[] = [
+  { id: 'session-timeline', label: '📅 לוח 10 המפגשים' },
+  { id: 'activity-library', label: '🗂️ ספריית הפעילויות' },
 ];
 
 export const MentorsTab: React.FC = () => {
@@ -25,6 +30,16 @@ export const MentorsTab: React.FC = () => {
           isActive={state.activeModule === mod.id}
           isDone={state.completedModules.has(mod.id)}
           onClick={() => setModule(mod.id)}
+        />
+      ))}
+
+      <div className={styles.sectionLabel} style={{ marginTop: 8 }}>כלים</div>
+      {TOOLS.map((tool) => (
+        <SidebarNavItem
+          key={tool.id}
+          label={tool.label}
+          isActive={state.activeModule === tool.id}
+          onClick={() => setModule(tool.id)}
         />
       ))}
 

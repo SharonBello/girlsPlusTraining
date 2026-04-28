@@ -1,4 +1,4 @@
-@use '../styles/variables' as *;
+@use "../styles/variables" as *;
 
 .shell {
   display: flex;
@@ -32,7 +32,20 @@
   height: 100%;
 }
 
-@media (max-width: 768px) {
+// ─── Mobile: break out of fixed-height shell ──────────────────────────────────
+
+@media (max-width: 750px) {
+  .shell {
+    height: auto;
+    overflow: visible;
+    min-height: 100vh;
+  }
+
+  .welcomeMain {
+    overflow: visible;
+    min-height: calc(100vh - #{$topnav-height});
+  }
+
   .layout {
     flex-direction: column;
     height: auto;
@@ -42,5 +55,6 @@
   .main {
     height: auto;
     overflow: visible;
+    min-height: 50vh;
   }
 }

@@ -26,7 +26,7 @@ const CATEGORIES: Category[] = [
   {
     id: 'brainstorm',
     label: '💡 ריעיון ובעיה',
-    ids: ['why-method', 'fishbone', 'empathy-mapping', 'user-journey-mapping', 'scamper', 'swot', 'dot-voting', 'mind-mapping', 'reverse-brainstorming', 'sdg-brainstorm', 'problem-selection'],
+    ids: ['why-method', 'fishbone', 'empathy-mapping', 'user-journey-mapping', 'scamper', 'swot', 'dot-voting', 'mind-mapping', 'reverse-brainstorming', 'stakeholder-analysis', 'problem-statement', 'sdg-brainstorm', 'problem-selection'],
   },
   {
     id: 'research',
@@ -108,7 +108,7 @@ export const ActivityLibrary: React.FC = () => {
         )}
 
         {/* Activity cards */}
-        <div className={styles.activitiesGrid}>
+        <div className={styles.activitiesGrid} style={{ gridTemplateColumns: categoryActivities.length > 2 ? "repeat(auto-fill, minmax(280px, 1fr))" : "1fr" }}>
           {categoryActivities.map((activity) => (
             <ActivityCard key={activity.id} activity={activity} />
           ))}

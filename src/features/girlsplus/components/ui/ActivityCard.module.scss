@@ -2,92 +2,162 @@
 @use "../../styles/variables" as *;
 
 .card {
-  border: 1px solid $border;
-  border-radius: $radius-md;
-  overflow: hidden;
-  margin-bottom: $space-2;
   background: $white;
-}
-
-.header {
-  display: flex;
-  align-items: flex-start;
-  gap: $space-3;
-  padding: $space-3 $space-4;
-  cursor: pointer;
-  direction: rtl;
+  border: 1px solid $border;
+  border-radius: $radius-lg;
+  overflow: hidden;
+  transition:
+    box-shadow 0.2s,
+    transform 0.2s;
 
   &:hover {
-    background: $bg;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transform: translateY(-1px);
   }
 }
 
-.duration {
-  font-size: 11px;
-  font-weight: 600;
-  color: $pink;
-  flex-shrink: 0;
-  width: 48px;
-  padding-top: 2px;
-  text-align: left;
-  direction: ltr;
+// ─── Image header ─────────────────────────────────────────────────────────────
+
+.imageHeader {
+  position: relative;
+  height: 130px;
+  overflow: hidden;
 }
 
-.info {
-  flex: 1;
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.imageOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.55) 0%, rgba(0, 0, 0, 0.1) 60%);
+}
+
+// ─── Gradient header (no image) ───────────────────────────────────────────────
+
+.gradientHeader {
+  height: 90px;
+  display: flex;
+  align-items: center;
+  padding: 0 $space-4;
+  gap: $space-3;
+}
+
+.gradientEmoji {
+  font-size: 32px;
+  flex-shrink: 0;
+}
+
+// ─── Shared header content (overlaid or inline) ───────────────────────────────
+
+.headerContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+
+  // when inside imageHeader, position at bottom
+  .imageHeader & {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    padding: $space-2 $space-3;
+  }
+}
+
+.categoryBadge {
+  font-size: 11px;
+  font-weight: 700;
+  color: $white;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(4px);
+  padding: 3px 10px;
+  border-radius: $radius-full;
+  letter-spacing: 0.05em;
+}
+
+.categoryBadgeLight {
+  font-size: 11px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.9);
+  letter-spacing: 0.05em;
+}
+
+.durationBadge {
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 600;
+}
+
+.durationBadgeLight {
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.85);
+  font-weight: 600;
+}
+
+// ─── Card body ────────────────────────────────────────────────────────────────
+
+.body {
+  padding: $space-4;
 }
 
 .name {
-  font-size: 13px;
-  font-weight: 600;
+  font-size: 15px;
+  font-weight: 700;
   color: $ink;
-  margin-bottom: 2px;
+  margin-bottom: $space-1;
+  line-height: 1.3;
 }
 
 .desc {
-  font-size: 12px;
+  font-size: 13px;
   color: $ink-2;
-  line-height: 1.5;
-  margin-bottom: $space-1;
+  line-height: 1.55;
+  margin-bottom: $space-3;
 }
 
-.badge {
-  display: inline-block;
-  font-size: 10px;
-  font-weight: 500;
-  background: $pink-light;
-  color: $pink;
-  padding: 2px 8px;
-  border-radius: $radius-sm;
-  margin-top: $space-1;
-}
-
-.toggle {
-  background: none;
+.expandBtn {
+  font-size: 12px;
+  font-weight: 600;
+  color: $purple;
+  background: $purple-light;
   border: none;
-  font-size: 14px;
-  color: $ink-3;
+  padding: 5px 14px;
+  border-radius: $radius-full;
   cursor: pointer;
-  flex-shrink: 0;
-  padding: 2px $space-1;
+  font-family: $font-base;
+  transition: background 0.15s;
+
+  &:hover {
+    background: color.scale($purple-light, $lightness: -5%);
+  }
+
+  &.expanded {
+    background: $pink-light;
+    color: $pink;
+  }
 }
 
-// ─── Expanded body ─────────────────────────────────────────────────────────────
+// ─── Expandable details ───────────────────────────────────────────────────────
 
-.body {
+.details {
   border-top: 1px solid $border;
   padding: $space-4;
-  direction: rtl;
+  background: $bg;
   display: flex;
   flex-direction: column;
-  gap: $space-3;
-  background: $bg;
+  gap: $space-4;
 }
 
 .section {
   display: flex;
   flex-direction: column;
-  gap: $space-1;
+  gap: $space-2;
 }
 
 .sectionTitle {
@@ -99,15 +169,15 @@
 }
 
 .list {
-  padding-right: $space-4;
-  font-size: 12px;
+  padding-right: $space-5;
+  font-size: 13px;
   color: $ink-2;
   line-height: 1.7;
 }
 
 .steps {
   padding-right: $space-5;
-  font-size: 12px;
+  font-size: 13px;
   color: $ink-2;
   line-height: 1.7;
 
@@ -121,7 +191,7 @@
   border-right: 3px solid $purple;
   padding: $space-2 $space-3;
   border-radius: 0 $radius-sm $radius-sm 0;
-  font-size: 12px;
+  font-size: 13px;
   color: $ink-2;
   line-height: 1.6;
 
@@ -131,20 +201,8 @@
   }
 }
 
-.link {
-  display: inline-flex;
-  align-items: center;
-  gap: 4px;
-  font-size: 12px;
-  font-weight: 500;
-  color: $blue;
-  background: $blue-light;
-  padding: 5px $space-3;
-  border-radius: $radius-sm;
-  text-decoration: none;
-  align-self: flex-start;
-
-  &:hover {
-    background: color.scale($blue-light, $lightness: -5%);
-  }
+.resources {
+  display: flex;
+  flex-direction: column;
+  gap: $space-2;
 }

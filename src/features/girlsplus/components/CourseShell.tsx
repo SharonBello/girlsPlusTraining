@@ -10,6 +10,7 @@ import { Module3Sessions } from './modules/Module3Sessions';
 import { Module4Quiz } from './modules/Module4Quiz';
 import { ScholarsModule } from './modules/ScholarsModule';
 import { ActivityLibrary } from './modules/ActivityLibrary';
+import { SessionTimeline } from './modules/SessionTimeline.tsx';
 import { CourseContext } from '../hooks/useCourse';
 import { useCourseState } from '../hooks/useCourseState';
 import type { ModuleId } from '../data/types';
@@ -24,6 +25,7 @@ const MODULE_MAP: Record<ModuleId, React.ReactNode> = {
   'app-inventor': <ScholarsModule moduleId="app-inventor" />,
   'coding-basics': <ScholarsModule moduleId="coding-basics" />,
   'activity-library': <ActivityLibrary />,
+  'session-timeline': <SessionTimeline />,
   'completion': null, // rendered as full screen like welcome
 };
 

@@ -1,8 +1,10 @@
 import type { Activity } from './types';
 
+
 export const activities: Record<string, Activity> = {
   'group-expression': {
     id: 'group-expression',
+    imageUrl: 'https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=400&h=200&fit=crop&q=80',
     name: 'ביטוי קבוצתי',
     description:
       'ציור קבוצתי על בריסטול — כל נערה בוחרת צבע ומוסיפה חלק לתמונה המשותפת. פורסים במרכז השולחן.',
@@ -22,6 +24,7 @@ export const activities: Record<string, Activity> = {
 
   'yes-no-game': {
     id: 'yes-no-game',
+    imageUrl: 'https://images.unsplash.com/photo-1494059980473-813e73ee784b?w=400&h=200&fit=crop&q=80',
     name: 'כן / לא / שחור / לבן',
     description:
       'משחק שבירת קרח שמעודד תקשורת מדויקת. אסור לענות במילים: כן, לא, שחור, לבן.',
@@ -38,13 +41,14 @@ export const activities: Record<string, Activity> = {
 
   'creative-thinking': {
     id: 'creative-thinking',
+    imageUrl: 'https://images.unsplash.com/photo-1558901357-ca41e027e43a?w=400&h=200&fit=crop&q=80',
     name: 'סדנת חשיבה יצירתית',
     description:
       'סדנה מובנית לפיתוח חשיבה מחוץ לקופסה. הנערות לומדות לבחון בעיות מזוויות שונות.',
     duration: 40,
     category: 'brainstorm',
     steps: [
-      'הצגת מצגת "חשיבה יצירתית" (מצורפת)',
+      'הצגת מצגת חשיבה יצירתית (צרפי את הקובץ מחומרי ההכשרה)',
       'תרגיל: "100 שימושים לכוס" — 5 דקות, כמות לפני איכות',
       'תרגיל: "מה אם..." — שאלות שמאתגרות הנחות יסוד',
       'דיון: מה הקשר לפיתוח אפליקציה?',
@@ -55,6 +59,7 @@ export const activities: Record<string, Activity> = {
 
   'sdg-brainstorm': {
     id: 'sdg-brainstorm',
+    imageUrl: 'https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=400&h=200&fit=crop&q=80',
     name: 'סיעור מוחות — בעיות מהקהילה',
     description:
       'הנערות מזהות בעיות מחייהן ומהקהילה בהתאם ל-17 יעדי האו"ם.',
@@ -73,6 +78,7 @@ export const activities: Record<string, Activity> = {
 
   'problem-selection': {
     id: 'problem-selection',
+    imageUrl: 'https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=400&h=200&fit=crop&q=80',
     name: 'בחירת הבעיה הסופית',
     description: 'הנערות בוחרות בעיה אחת ברורה וספציפית הניתנת לפתרון דיגיטלי.',
     duration: 20,
@@ -89,6 +95,7 @@ export const activities: Record<string, Activity> = {
 
   'market-survey': {
     id: 'market-survey',
+    imageUrl: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=200&fit=crop&q=80',
     name: 'כתיבת סקר שוק',
     description: 'הנערות מגדירות קהל יעד וכותבות שאלון לבדיקת הבעיה.',
     duration: 30,
@@ -104,6 +111,7 @@ export const activities: Record<string, Activity> = {
 
   'survey-analysis': {
     id: 'survey-analysis',
+    imageUrl: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=200&fit=crop&q=80',
     name: 'ניתוח נתוני הסקר',
     description: 'הנערות מנתחות את תשובות הסקר ומסיקות מסקנות.',
     duration: 40,
@@ -120,6 +128,7 @@ export const activities: Record<string, Activity> = {
 
   'logo-design': {
     id: 'logo-design',
+    imageUrl: 'https://images.unsplash.com/photo-1626785774573-4b799315345d?w=400&h=200&fit=crop&q=80',
     name: 'עיצוב לוגו לקבוצה',
     description:
       'הנערות מעצבות לוגו שמייצג את הקבוצה ואת הפרויקט. אפשר בציור ידני, Canva, או כלי AI.',
@@ -138,6 +147,7 @@ export const activities: Record<string, Activity> = {
 
   'solution-brainstorm': {
     id: 'solution-brainstorm',
+    imageUrl: 'https://images.unsplash.com/photo-1531482615713-2afd69097998?w=400&h=200&fit=crop&q=80',
     name: 'סיעור מוחות — פתרונות',
     description: 'הנערות מציעות פתרונות דיגיטליים לבעיה על בסיס נתוני הסקר.',
     duration: 35,
@@ -155,6 +165,7 @@ export const activities: Record<string, Activity> = {
 
   'mvp-definition': {
     id: 'mvp-definition',
+    imageUrl: 'https://images.unsplash.com/photo-1556761175-b413da4baf72?w=400&h=200&fit=crop&q=80',
     name: 'הגדרת MVP — Must / Should / Nice',
     description:
       'הנערות מגדירות את הפיצ׳ר הכי חשוב שחייבים לבנות כדי לפתור את הבעיה המרכזית.',
@@ -173,6 +184,7 @@ export const activities: Record<string, Activity> = {
 
   'user-flow': {
     id: 'user-flow',
+    imageUrl: 'https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?w=400&h=200&fit=crop&q=80',
     name: 'תכנון User Flow',
     description:
       'הנערות מתכננות את זרימת המשתמשת — ממסך לוגין עד לפיצ׳ר המרכזי.',
@@ -190,6 +202,7 @@ export const activities: Record<string, Activity> = {
 
   'wireframes': {
     id: 'wireframes',
+    imageUrl: 'https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?w=400&h=200&fit=crop&q=80',
     name: 'Wireframes — אב-טיפוס ראשוני',
     description: 'ציור ידני של המסכים העיקריים לפי ה-User Flow.',
     duration: 30,
@@ -207,6 +220,7 @@ export const activities: Record<string, Activity> = {
 
   'user-testing': {
     id: 'user-testing',
+    imageUrl: 'https://images.unsplash.com/photo-1576153192396-180ecef2a715?w=400&h=200&fit=crop&q=80',
     name: 'בדיקת משתמשים',
     description:
       'הנערות מציגות את אב-הטיפוס לנערות אחרות ואוספות פידבק.',
@@ -224,6 +238,7 @@ export const activities: Record<string, Activity> = {
 
   'feedback-iteration': {
     id: 'feedback-iteration',
+    imageUrl: 'https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=400&h=200&fit=crop&q=80',
     name: 'עיבוד פידבק ושיפור',
     description: 'הנערות מנתחות את הפידבק ומשפרות את אב-הטיפוס.',
     duration: 25,
@@ -240,6 +255,7 @@ export const activities: Record<string, Activity> = {
 
   'work-groups': {
     id: 'work-groups',
+    imageUrl: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=400&h=200&fit=crop&q=80',
     name: 'התפצלות לקבוצות עבודה',
     description:
       'הקבוצה מתחלקת לתפקידים כמו סטארט-אפ אמיתי: עיצוב, פיתוח, פיץ׳.',
@@ -257,6 +273,7 @@ export const activities: Record<string, Activity> = {
 
   'app-building': {
     id: 'app-building',
+    imageUrl: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=400&h=200&fit=crop&q=80',
     name: 'בניית האפליקציה ב-App Inventor',
     description:
       'קבוצת הפיתוח בונה את האפליקציה. קבוצת העיצוב משלימה ממשק. קבוצת הפיץ׳ בונה מצגת.',
@@ -271,6 +288,7 @@ export const activities: Record<string, Activity> = {
 
   'pitch-filming': {
     id: 'pitch-filming',
+    imageUrl: 'https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?w=400&h=200&fit=crop&q=80',
     name: 'צילום הפיץ׳',
     description: 'הנערות מציגות מול מצלמה את הפיץ׳ המוכן לתחרות.',
     duration: 30,
@@ -287,6 +305,7 @@ export const activities: Record<string, Activity> = {
 
   'demo-video': {
     id: 'demo-video',
+    imageUrl: 'https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=400&h=200&fit=crop&q=80',
     name: 'יצירת סרטון דמו',
     description:
       'הקלטת סרטון קצר שמדגים את האפליקציה בפעולה — עוברת על המסכים העיקריים.',
@@ -303,6 +322,7 @@ export const activities: Record<string, Activity> = {
 
   'expectations-cookies': {
     id: 'expectations-cookies',
+    imageUrl: 'https://images.unsplash.com/photo-1558961363-fa8fdf82db35?w=400&h=200&fit=crop&q=80',
     name: 'ציפיות ועוגיות',
     description: 'פעילות היכרות שבה כל נערה משתפת את ציפיותיה תוך כדי אכילת עוגיות — יוצרת אווירה חמה ופתוחה.',
     duration: 20,
@@ -320,6 +340,7 @@ export const activities: Record<string, Activity> = {
 
   'intro-selfie': {
     id: 'intro-selfie',
+    imageUrl: 'https://images.unsplash.com/photo-1523251343397-9225e4cb6319?w=400&h=200&fit=crop&q=80',
     name: 'הכרותמונה',
     description: 'כל נערה בוחרת תמונת סלפי ומשתפת את הסיפור שמאחוריה — פעילות המחברת דרך רגע אישי.',
     duration: 20,
@@ -335,6 +356,7 @@ export const activities: Record<string, Activity> = {
 
   'who-is-she': {
     id: 'who-is-she',
+    imageUrl: 'https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=400&h=200&fit=crop&q=80',
     name: 'מי זו? מי זו?',
     description: 'פעילות רושם ראשוני — הנערות מנחשות אילו עובדות על המנטורית הן אמת ואילו שקר.',
     duration: 15,
@@ -352,6 +374,7 @@ export const activities: Record<string, Activity> = {
 
   'tarot-cards': {
     id: 'tarot-cards',
+    imageUrl: 'https://images.unsplash.com/photo-1606167668584-78701c57f13d?w=400&h=200&fit=crop&q=80',
     name: 'הקוראת בקלפים',
     description: 'פעילות עם קלפי טאקי ממוינים — כל קלף מזמין שיתוף שונה על עצמה.',
     duration: 25,
@@ -373,6 +396,7 @@ export const activities: Record<string, Activity> = {
 
   'truth-or-lie': {
     id: 'truth-or-lie',
+    imageUrl: 'https://images.unsplash.com/photo-1507048331197-7d4ac70811cf?w=400&h=200&fit=crop&q=80',
     name: 'אמת או שקר',
     description: 'כל נערה אומרת שתי אמיתות ושקר אחד — הקבוצה מנחשת מה השקר.',
     duration: 15,
@@ -405,6 +429,7 @@ export const activities: Record<string, Activity> = {
 
   'warm-up-flow': {
     id: 'warm-up-flow',
+    imageUrl: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=200&fit=crop&q=80',
     name: 'משחק הזרם',
     description: 'משחק פתיחה מהיר להפעלת האנרגיה — הנערות עומדות במעגל ושולחות "זרם" אחת לשנייה.',
     duration: 10,
@@ -423,6 +448,7 @@ export const activities: Record<string, Activity> = {
 
   'why-method': {
     id: 'why-method',
+    imageUrl: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=400&h=200&fit=crop&q=80',
     name: 'שיטת ה"למה?"',
     description: 'כלי לחשיפת שורש הבעיה על ידי שאלת "למה?" חמש פעמים ברצף — מגיע לסיבת השורש האמיתית.',
     duration: 20,
@@ -440,6 +466,7 @@ export const activities: Record<string, Activity> = {
 
   'fishbone': {
     id: 'fishbone',
+    imageUrl: 'https://images.unsplash.com/photo-1553484771-371a605b060b?w=400&h=200&fit=crop&q=80',
     name: 'דיאגרמת עצם הדג',
     description: 'כלי ויזואלי למיפוי כל הגורמים לבעיה — הבעיה היא ה"ראש", הגורמים הם ה"עצמות".',
     duration: 25,
@@ -458,6 +485,7 @@ export const activities: Record<string, Activity> = {
 
   'empathy-mapping': {
     id: 'empathy-mapping',
+    imageUrl: 'https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?w=400&h=200&fit=crop&q=80',
     name: 'מיפוי אמפתיה',
     description: 'כלי לחשיבה מנקודת מבט המשתמשת — מה היא חושבת, מרגישה, אומרת ועושה.',
     duration: 30,
@@ -477,6 +505,7 @@ export const activities: Record<string, Activity> = {
 
   'user-journey-mapping': {
     id: 'user-journey-mapping',
+    imageUrl: 'https://images.unsplash.com/photo-1531538606174-0f90ff5dce83?w=400&h=200&fit=crop&q=80',
     name: 'מיפוי מסע משתמשים',
     description: 'מעקב אחר כל שלב שהמשתמשת עוברת עם הבעיה — מהמגע הראשון ועד הפתרון.',
     duration: 35,
@@ -494,6 +523,7 @@ export const activities: Record<string, Activity> = {
 
   'scamper': {
     id: 'scamper',
+    imageUrl: 'https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?w=400&h=200&fit=crop&q=80',
     name: 'SCAMPER',
     description: 'טכניקת חשיבה יצירתית — 7 שאלות שמאלצות חשיבה מזוויות שונות על הרעיון.',
     duration: 30,
@@ -512,6 +542,7 @@ export const activities: Record<string, Activity> = {
 
   'swot': {
     id: 'swot',
+    imageUrl: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=400&h=200&fit=crop&q=80',
     name: 'SWOT',
     description: 'ניתוח חוזקות, חולשות, הזדמנויות ואיומים של הרעיון — כלי עסקי קלאסי.',
     duration: 25,
@@ -530,6 +561,7 @@ export const activities: Record<string, Activity> = {
 
   'dot-voting': {
     id: 'dot-voting',
+    imageUrl: 'https://images.unsplash.com/photo-1593085512500-5d55148d6f0d?w=400&h=200&fit=crop&q=80',
     name: 'הצבעת מדבקות (DOT Voting)',
     description: 'שיטת הצבעה דמוקרטית לבחירה מתוך רשימה — כל אחת מציבה מדבקות על הבעיות/רעיונות שמוצאים חן בעיניה.',
     duration: 15,
@@ -547,6 +579,7 @@ export const activities: Record<string, Activity> = {
 
   'mind-mapping': {
     id: 'mind-mapping',
+    imageUrl: 'https://images.unsplash.com/photo-1471864190281-a93a3070b6de?w=400&h=200&fit=crop&q=80',
     name: 'מיפוי מוח (Mind Mapping)',
     description: 'יצירת מפה ויזואלית של מושגים סביב נושא מרכזי — עוזרת לחשוב בחופשיות ולמצוא קשרים.',
     duration: 20,
@@ -565,6 +598,7 @@ export const activities: Record<string, Activity> = {
 
   'reverse-brainstorming': {
     id: 'reverse-brainstorming',
+    imageUrl: 'https://images.unsplash.com/photo-1543286386-2e659306cd6c?w=400&h=200&fit=crop&q=80',
     name: 'סיעור מוחות הפוך (Reverse Brainstorming)',
     description: 'במקום לשאול "איך נפתור?" — שואלים "איך נגרום לבעיה להיות גרועה יותר?" ואז הופכים את התשובות.',
     duration: 25,
@@ -579,5 +613,41 @@ export const activities: Record<string, Activity> = {
     ],
     facilitationTip: 'פעילות מצוינת כששוברים חסמי חשיבה. הנערות נהנות מהחשיבה ה"הפוכה" — זה מוריד את הלחץ.',
   },
+
+  'stakeholder-analysis': {
+    id: 'stakeholder-analysis',
+    imageUrl: 'https://images.unsplash.com/photo-1528605248644-14dd04022da1?w=400&h=200&fit=crop&q=80',
+    name: 'ניתוח בעלי עניין (Stakeholder Analysis)',
+    description: 'מיפוי של כל האנשים והגורמים שמושפעים מהבעיה ויכולים לעזור — או לעכב — את הפתרון.',
+    duration: 30,
+    category: 'brainstorm',
+    materials: ['לוח / בריסטול', 'פתקיות', 'טושים'],
+    steps: [
+      'שלב 1: רשימת כל בעלי העניין — מי קשור לבעיה?',
+      'שלב 2: מיפוי בציר X (כוח/השפעה) ו-Y (עניין/מעורבות)',
+      'שלב 3: חלוקה לקטגוריות: מנהל | שמור מרוצה | הודע | מעקב',
+      'שלב 4: לכל קטגוריה — איך מתנהלים איתה?',
+      'שלב 5: זיהוי בעלי העניין הקריטיים לפתרון שלנו',
+    ],
+    facilitationTip: 'Stakeholder Analysis מצוינת לפני שמתחילות לתכנן — עוזרת להבין מי צריך להסכים, מי יעזור ומי עלול להתנגד.',
+  },
+
+  'problem-statement': {
+    id: 'problem-statement',
+    imageUrl: 'https://images.unsplash.com/photo-1455390582262-044cdead277a?w=400&h=200&fit=crop&q=80',
+    name: 'הגדרת בעיה (Problem Statement)',
+    description: 'ניסוח ברור וממוקד של הבעיה בארבעה שלבים: מהי הבעיה, מי מושפע, מה ההשפעה, למה חשוב לפתור.',
+    duration: 25,
+    category: 'brainstorm',
+    steps: [
+      'שלב 1 — מהי הבעיה? תארי בצורה ברורה ותמציתית',
+      'שלב 2 — מי מושפע? הגדירי את קבוצת האנשים הסובלים',
+      'שלב 3 — מה ההשפעה? פרטי את ההשלכות השליליות',
+      'שלב 4 — למה חשוב לפתור? מה יקרה אם לא נפתור?',
+      'שלב 5 — שלבי את ארבע התשובות לניסוח אחד שלם',
+    ],
+    facilitationTip: 'חשוב: בשלב זה לא מציעים פתרונות — רק מגדירים את הבעיה. Problem Statement ברור = פתרון טוב יותר.',
+  },
+
 
 };
