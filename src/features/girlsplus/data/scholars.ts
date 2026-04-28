@@ -1,12 +1,12 @@
 import type { ScholarModule } from './types';
-import {
-  RESOURCE_LOOPS_DOC,
-  RESOURCE_VARIABLES_DOC,
-  RESOURCE_CONDITIONS_DOC,
-  RESOURCE_CODING_INTRO_PDF,
-  RESOURCE_APP_INVENTOR_GUIDE,
-  RESOURCE_APP_INVENTOR_SLIDES,
-} from './resources';
+// import {
+//   RESOURCE_LOOPS_DOC,
+//   RESOURCE_VARIABLES_DOC,
+//   RESOURCE_CONDITIONS_DOC,
+//   RESOURCE_CODING_INTRO_PDF,
+//   RESOURCE_APP_INVENTOR_GUIDE,
+//   RESOURCE_APP_INVENTOR_SLIDES,
+// } from './resources';
 
 export const scholarModules: ScholarModule[] = [
   {
