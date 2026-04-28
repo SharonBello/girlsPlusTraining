@@ -1,0 +1,73 @@
+@use '../../styles/variables' as *;
+
+.nav {
+  position: fixed;
+  top: 0;
+  inset-inline: 0;
+  height: $topnav-height;
+  background: $gradient-brand;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 $space-6;
+  z-index: 100;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: $space-3;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: 800;
+  color: $white;
+  letter-spacing: -0.5px;
+
+  span {
+    opacity: 0.75;
+    font-weight: 300;
+  }
+}
+
+.tag {
+  font-size: 11px;
+  color: rgba($white, 0.7);
+  background: rgba($white, 0.15);
+  padding: 3px 10px;
+  border-radius: $radius-full;
+  letter-spacing: 0.06em;
+}
+
+.progress {
+  display: flex;
+  align-items: center;
+  gap: $space-3;
+}
+
+.dots {
+  display: flex;
+  gap: 5px;
+}
+
+.dot {
+  width: 32px;
+  height: 5px;
+  border-radius: 3px;
+  background: rgba($white, 0.25);
+  transition: background 0.3s;
+
+  &.done {
+    background: $white;
+  }
+
+  &.active {
+    background: rgba($white, 0.7);
+  }
+}
+
+.label {
+  font-size: 12px;
+  color: rgba($white, 0.75);
+}

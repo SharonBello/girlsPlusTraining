@@ -1,0 +1,119 @@
+@use "sass:color";
+@use "../../styles/variables" as *;
+
+.screen {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px $space-6;
+  background: linear-gradient(160deg, #f8f0ff 0%, #fff0f8 50%, #f0f8ff 100%);
+  overflow-y: auto;
+}
+
+.card {
+  background: $white;
+  border: 1px solid $border;
+  border-radius: 20px;
+  padding: 40px;
+  max-width: 520px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 8px 40px rgba($purple, 0.1);
+}
+
+.badge {
+  display: inline-block;
+  background: $gradient-brand;
+  color: $white;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 6px $space-5;
+  border-radius: $radius-full;
+  margin-bottom: $space-4;
+}
+
+.title {
+  font-size: 26px;
+  font-weight: 800;
+  color: $ink;
+  line-height: 1.2;
+  margin-bottom: $space-3;
+}
+
+.body {
+  font-size: 15px;
+  color: $ink-2;
+  line-height: 1.7;
+  margin-bottom: $space-6;
+}
+
+.summaryGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: $space-2;
+  text-align: right;
+  margin-bottom: $space-6;
+}
+
+.summaryItem {
+  background: $bg;
+  border: 1px solid $border;
+  border-radius: $radius-md;
+  padding: $space-3 $space-4;
+}
+
+.summaryTitle {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: $pink;
+  margin-bottom: $space-1;
+}
+
+.summaryBody {
+  font-size: 13px;
+  color: $ink-2;
+  line-height: 1.45;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: $space-2;
+  margin-bottom: $space-5;
+}
+
+.link {
+  display: block;
+  font-size: 14px;
+  color: $blue;
+  text-decoration: none;
+  padding: $space-2 $space-4;
+  border-radius: $radius-md;
+  background: $blue-light;
+  transition: background 0.15s;
+
+  &:hover {
+    background: color.scale($blue-light, $lightness: -5%);
+  }
+}
+
+.restartBtn {
+  background: none;
+  border: 1.5px solid $border-2;
+  color: $ink-2;
+  padding: 9px $space-6;
+  border-radius: $radius-full;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  font-family: $font-base;
+  transition: all 0.15s;
+
+  &:hover {
+    background: $bg;
+    color: $ink;
+  }
+}

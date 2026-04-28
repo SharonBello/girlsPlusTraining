@@ -1,0 +1,103 @@
+// ─── Brand palette ────────────────────────────────────────────────────────────
+$pink: #e91e8c;
+$pink-light: #fce4f3;
+$pink-border: rgba(233, 30, 140, 0.25);
+
+$purple: #7b2d8b;
+$purple-light: #f3e8f7;
+
+$teal: #00897b;
+$teal-light: #e0f2f1;
+
+$orange: #f57c00;
+$orange-light: #fff3e0;
+
+$blue: #1565c0;
+$blue-light: #e3f2fd;
+
+$green: #2e7d32;
+$green-light: #e8f5e9;
+$green-border: #a3d4b5;
+
+$red: #c62828;
+$red-light: #ffebee;
+$red-border: #fca5a5;
+
+// ─── Neutrals ────────────────────────────────────────────────────────────────
+$bg: #faf8fc;
+$white: #ffffff;
+$ink: #1a1a2e;
+$ink-2: #3d3d5c;
+$ink-3: #8888aa;
+$border: #ede8f5;
+$border-2: #d8d0f0;
+
+// ─── Sidebar ──────────────────────────────────────────────────────────────────
+$sidebar-width: 240px;
+$topnav-height: 56px;
+
+// ─── Typography ──────────────────────────────────────────────────────────────
+$font-base: "Heebo", sans-serif;
+
+// ─── Spacing scale ───────────────────────────────────────────────────────────
+$space-1: 4px;
+$space-2: 8px;
+$space-3: 12px;
+$space-4: 16px;
+$space-5: 20px;
+$space-6: 24px;
+$space-8: 32px;
+
+// ─── Radius ──────────────────────────────────────────────────────────────────
+$radius-sm: 6px;
+$radius-md: 10px;
+$radius-lg: 14px;
+$radius-xl: 20px;
+$radius-full: 100px;
+
+// ─── Gradients ───────────────────────────────────────────────────────────────
+$gradient-brand: linear-gradient(135deg, $purple 0%, $pink 100%);
+
+// ─── Mixins ──────────────────────────────────────────────────────────────────
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin label-mono {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+@mixin card {
+  background: $white;
+  border: 1px solid $border;
+  border-radius: $radius-lg;
+}
+
+@mixin section-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: $ink;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  &::before {
+    content: "";
+    width: 3px;
+    height: 18px;
+    background: $gradient-brand;
+    border-radius: 2px;
+    flex-shrink: 0;
+  }
+}

@@ -1,0 +1,100 @@
+@use '../../styles/variables' as *;
+
+.question {
+  @include card;
+  padding: $space-5;
+  margin-bottom: $space-4;
+}
+
+.label {
+  @include label-mono;
+  color: $ink-3;
+  margin-bottom: $space-2;
+}
+
+.text {
+  font-size: 15px;
+  font-weight: 500;
+  color: $ink;
+  line-height: 1.55;
+  margin-bottom: $space-4;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: $space-2;
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  gap: $space-3;
+  padding: 10px $space-4;
+  border: 1.5px solid $border;
+  border-radius: $radius-md;
+  font-size: 14px;
+  color: $ink-2;
+  background: $white;
+  cursor: pointer;
+  text-align: right;
+  font-family: $font-base;
+  width: 100%;
+  direction: rtl;
+  transition: all 0.15s;
+
+  &:hover:not(:disabled) {
+    border-color: $pink;
+    background: $pink-light;
+    color: $ink;
+  }
+
+  &:disabled {
+    cursor: default;
+  }
+
+  &.correct {
+    border-color: $green;
+    background: $green-light;
+    color: $green;
+  }
+
+  &.wrong {
+    border-color: $red;
+    background: $red-light;
+    color: $red;
+  }
+
+  &.dimmed {
+    opacity: 0.4;
+  }
+}
+
+.optionLetter {
+  width: 24px;
+  height: 24px;
+  border-radius: $radius-sm;
+  border: 1.5px solid currentColor;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.explanation {
+  margin-top: $space-3;
+  padding: $space-3;
+  background: $bg;
+  border-radius: $radius-md;
+  border-right: 3px solid $green;
+  font-size: 13px;
+  color: $ink-2;
+  line-height: 1.6;
+
+  strong {
+    color: $green;
+    font-weight: 700;
+  }
+}

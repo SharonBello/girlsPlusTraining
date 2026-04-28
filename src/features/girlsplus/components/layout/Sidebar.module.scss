@@ -1,0 +1,12 @@
+@use '../../styles/variables' as *;
+
+.sidebar {
+  width: $sidebar-width;
+  flex-shrink: 0;
+  background: $white;
+  border-inline-start: 1px solid $border;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+}

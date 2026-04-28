@@ -1,0 +1,117 @@
+@use '../../styles/variables' as *;
+
+.card {
+  @include card;
+  overflow: hidden;
+  margin-bottom: $space-3;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: $space-4;
+  padding: $space-3 $space-5;
+  cursor: pointer;
+  direction: rtl;
+
+  &:hover {
+    background: $bg;
+  }
+}
+
+.num {
+  width: 36px;
+  height: 36px;
+  border-radius: $radius-sm;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: 700;
+  color: $white;
+  flex-shrink: 0;
+}
+
+.info {
+  flex: 1;
+}
+
+.title {
+  font-size: 14px;
+  font-weight: 600;
+  color: $ink;
+  margin-bottom: 3px;
+}
+
+.meta {
+  font-size: 12px;
+  color: $ink-3;
+  display: flex;
+  gap: $space-2;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.milestoneTag {
+  font-size: 10px;
+  font-weight: 600;
+  color: $orange;
+  background: $orange-light;
+  padding: 1px 7px;
+  border-radius: $radius-sm;
+}
+
+.chevron {
+  font-size: 14px;
+  color: $ink-3;
+  flex-shrink: 0;
+}
+
+// ─── Body ─────────────────────────────────────────────────────────────────────
+
+.body {
+  border-top: 1px solid $border;
+  padding: $space-4 $space-5;
+  direction: rtl;
+  background: $bg;
+  display: flex;
+  flex-direction: column;
+  gap: $space-3;
+}
+
+.milestoneNote {
+  background: $orange-light;
+  border-right: 3px solid $orange;
+  padding: $space-2 $space-3;
+  border-radius: 0 $radius-sm $radius-sm 0;
+  font-size: 13px;
+  color: $ink-2;
+  font-weight: 500;
+}
+
+.activitiesLabel {
+  @include label-mono;
+  color: $ink-3;
+}
+
+.actNote {
+  font-size: 11px;
+  color: $ink-3;
+  font-style: italic;
+  margin-bottom: $space-1;
+}
+
+.facilitationNote {
+  background: $purple-light;
+  border-right: 3px solid $purple;
+  padding: $space-3;
+  border-radius: 0 $radius-md $radius-md 0;
+  font-size: 13px;
+  color: $ink-2;
+  line-height: 1.6;
+
+  strong {
+    color: $purple;
+    font-weight: 600;
+  }
+}

@@ -1,0 +1,46 @@
+@use '../styles/variables' as *;
+
+.shell {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  font-family: $font-base;
+  background: $bg;
+}
+
+.welcomeMain {
+  margin-top: $topnav-height;
+  flex: 1;
+  overflow: hidden;
+  display: flex;
+}
+
+.layout {
+  display: flex;
+  flex-direction: row;
+  margin-top: $topnav-height;
+  height: calc(100vh - #{$topnav-height});
+  overflow: hidden;
+}
+
+.main {
+  flex: 1;
+  min-width: 0;
+  overflow-y: auto;
+  height: 100%;
+}
+
+@media (max-width: 768px) {
+  .layout {
+    flex-direction: column;
+    height: auto;
+    overflow: visible;
+  }
+
+  .main {
+    height: auto;
+    overflow: visible;
+  }
+}

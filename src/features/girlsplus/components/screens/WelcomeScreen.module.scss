@@ -1,0 +1,146 @@
+@use '../../styles/variables' as *;
+
+.screen {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px $space-6;
+  background: linear-gradient(160deg, #f8f0ff 0%, #fff0f8 50%, #f0f8ff 100%);
+  overflow-y: auto;
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  max-width: 860px;
+}
+
+.badge {
+  display: inline-block;
+  background: $gradient-brand;
+  color: $white;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 5px $space-4;
+  border-radius: $radius-full;
+  margin-bottom: $space-5;
+  letter-spacing: 0.08em;
+}
+
+.title {
+  font-size: clamp(28px, 5vw, 48px);
+  font-weight: 800;
+  color: $ink;
+  line-height: 1.15;
+  margin-bottom: $space-3;
+}
+
+.highlight {
+  background: $gradient-brand;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.sub {
+  font-size: 18px;
+  color: $ink-2;
+  margin-bottom: $space-8;
+}
+
+// ─── Track cards ─────────────────────────────────────────────────────────────
+
+.tracks {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: $space-4;
+  width: 100%;
+  margin-bottom: $space-6;
+
+  @media (max-width: 700px) {
+    grid-template-columns: 1fr;
+    max-width: 380px;
+  }
+}
+
+.trackCard {
+  background: $white;
+  border: 2px solid var(--track-bg);
+  border-radius: $radius-xl;
+  padding: $space-6 $space-5;
+  cursor: pointer;
+  font-family: $font-base;
+  text-align: center;
+  transition: all 0.2s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: $space-2;
+
+  &:hover {
+    border-color: var(--track-color);
+    background: var(--track-bg);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.trackEmoji {
+  font-size: 36px;
+  margin-bottom: $space-1;
+}
+
+.trackTitle {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--track-color);
+}
+
+.trackSubtitle {
+  font-size: 11px;
+  font-weight: 500;
+  color: $ink-3;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.trackDesc {
+  font-size: 13px;
+  color: $ink-2;
+  line-height: 1.55;
+  margin-top: $space-1;
+}
+
+.trackArrow {
+  margin-top: $space-3;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--track-color);
+  opacity: 0;
+  transition: opacity 0.2s;
+
+  .trackCard:hover & {
+    opacity: 1;
+  }
+}
+
+// ─── Meta ─────────────────────────────────────────────────────────────────────
+
+.meta {
+  display: flex;
+  align-items: center;
+  gap: $space-3;
+  font-size: 13px;
+  color: $ink-3;
+
+  a {
+    color: $blue;
+    text-decoration: none;
+
+    &:hover { text-decoration: underline; }
+  }
+}

@@ -1,0 +1,116 @@
+@use "sass:color";
+@use "../../../styles/variables" as *;
+
+.tab {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  overflow-y: auto;
+  padding-bottom: $space-4;
+}
+
+.sectionLabel {
+  @include label-mono;
+  color: $ink-3;
+  padding: $space-3 $space-4 $space-1;
+}
+
+.viewAllBtn {
+  display: block;
+  width: 100%;
+  text-align: right;
+  padding: $space-2 $space-4;
+  font-size: 12px;
+  font-weight: 600;
+  color: $purple;
+  background: $purple-light;
+  border: none;
+  cursor: pointer;
+  font-family: $font-base;
+  margin-bottom: $space-1;
+  transition: background 0.15s;
+
+  &:hover {
+    background: color.scale($purple-light, $lightness: -4%);
+  }
+}
+
+// ─── Activity groups ──────────────────────────────────────────────────────────
+
+.actGroup {
+  border-bottom: 1px solid $border;
+
+  &:last-of-type {
+    border: none;
+  }
+}
+
+.actGroupLabel {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: $space-2 $space-4;
+  font-size: 11px;
+  font-weight: 700;
+  color: $ink-3;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: right;
+  font-family: $font-base;
+  direction: rtl;
+
+  &:hover {
+    background: $pink-light;
+    color: $purple;
+  }
+}
+
+.chevron {
+  font-size: 10px;
+}
+
+.actGroupItems {
+  padding: 0 $space-3 $space-2;
+}
+
+.actItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px $space-2;
+  font-size: 12px;
+  color: $ink-2;
+  border-bottom: 1px dashed $border;
+  direction: rtl;
+
+  &:last-child {
+    border: none;
+  }
+}
+
+.actName {
+  color: $blue;
+}
+
+.actDuration {
+  font-size: 10px;
+  color: $ink-3;
+  white-space: nowrap;
+}
+
+// ─── External links ───────────────────────────────────────────────────────────
+
+.externalLink {
+  display: block;
+  font-size: 12px;
+  color: $blue;
+  padding: $space-2 $space-5;
+  text-decoration: none;
+  transition: background 0.12s;
+
+  &:hover {
+    background: $blue-light;
+  }
+}

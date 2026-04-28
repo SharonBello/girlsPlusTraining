@@ -1,0 +1,31 @@
+@use '../../styles/variables' as *;
+
+.tabBar {
+  display: flex;
+  border-bottom: 1px solid $border;
+  flex-shrink: 0;
+}
+
+.tab {
+  flex: 1;
+  padding: 10px 4px;
+  font-size: 11px;
+  font-weight: 600;
+  font-family: $font-base;
+  cursor: pointer;
+  color: $ink-3;
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  transition: all 0.2s;
+
+  &:hover {
+    background: $pink-light;
+    color: $purple;
+  }
+
+  &.active {
+    color: $purple;
+    border-bottom-color: $pink;
+  }
+}

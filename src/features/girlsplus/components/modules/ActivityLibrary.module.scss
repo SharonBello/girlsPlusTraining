@@ -1,0 +1,161 @@
+@use '../../styles/variables' as *;
+
+.body {
+  padding: $space-5 $space-8;
+  max-width: 860px;
+  margin-inline: auto;
+  direction: rtl;
+
+  @media (max-width: 600px) {
+    padding: $space-3 $space-4;
+  }
+}
+
+// ─── Category filter bar ──────────────────────────────────────────────────────
+
+.filterBar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $space-2;
+  margin-bottom: $space-5;
+}
+
+.filterBtn {
+  display: flex;
+  align-items: center;
+  gap: $space-1;
+  padding: 6px 14px;
+  border-radius: $radius-full;
+  border: 1.5px solid $border;
+  background: $white;
+  font-size: 13px;
+  font-weight: 500;
+  font-family: $font-base;
+  color: $ink-2;
+  cursor: pointer;
+  transition: all 0.15s;
+
+  &:hover {
+    border-color: $pink;
+    color: $pink;
+  }
+
+  &.active {
+    background: $pink;
+    border-color: $pink;
+    color: $white;
+  }
+}
+
+.count {
+  font-size: 10px;
+  background: rgba($white, 0.3);
+  border-radius: 10px;
+  padding: 1px 6px;
+
+  .filterBtn:not(.active) & {
+    background: $border;
+    color: $ink-3;
+  }
+}
+
+// ─── Category intro (icebreakers) ─────────────────────────────────────────────
+
+.categoryIntro {
+  background: linear-gradient(135deg, $purple-light, $pink-light);
+  border: 1px solid $pink-border;
+  border-radius: $radius-lg;
+  padding: $space-5;
+  margin-bottom: $space-5;
+}
+
+.introTitle {
+  font-size: 15px;
+  font-weight: 700;
+  color: $purple;
+  margin-bottom: $space-3;
+}
+
+.introText {
+  font-size: 14px;
+  color: $ink-2;
+  line-height: 1.7;
+  margin-bottom: $space-4;
+}
+
+.introTips {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: $space-2;
+
+  @media (max-width: 500px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.tip {
+  font-size: 13px;
+  color: $purple;
+  font-weight: 500;
+}
+
+// ─── Activities grid ──────────────────────────────────────────────────────────
+
+.activitiesGrid {
+  display: flex;
+  flex-direction: column;
+  gap: $space-2;
+  margin-bottom: $space-6;
+}
+
+// ─── Add activity section ─────────────────────────────────────────────────────
+
+.addSection {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: $white;
+  border: 1.5px dashed $border-2;
+  border-radius: $radius-lg;
+  padding: $space-5;
+  margin-bottom: $space-4;
+  gap: $space-4;
+
+  @media (max-width: 600px) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.addHeader {}
+
+.addTitle {
+  font-size: 15px;
+  font-weight: 600;
+  color: $ink;
+  margin-bottom: 3px;
+}
+
+.addSub {
+  font-size: 13px;
+  color: $ink-3;
+}
+
+.addBtn {
+  background: $gradient-brand;
+  color: $white;
+  border: none;
+  padding: 10px 22px;
+  border-radius: $radius-full;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: $font-base;
+  white-space: nowrap;
+  transition: opacity 0.15s;
+  flex-shrink: 0;
+
+  &:hover {
+    opacity: 0.88;
+  }
+}

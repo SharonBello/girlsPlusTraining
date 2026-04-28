@@ -1,0 +1,49 @@
+@use '../../styles/variables' as *;
+
+.header {
+  background: $white;
+  border-bottom: 1px solid $border;
+  padding: $space-4 $space-8;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+
+  @media (max-width: 600px) {
+    padding: $space-3 $space-4;
+    flex-wrap: wrap;
+    gap: $space-2;
+  }
+}
+
+.eyebrow {
+  @include label-mono;
+  color: $pink;
+  margin-bottom: $space-1;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: 700;
+  color: $ink;
+}
+
+.btn {
+  background: $gradient-brand;
+  color: $white;
+  border: none;
+  padding: 9px $space-6;
+  border-radius: $radius-full;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: $font-base;
+  white-space: nowrap;
+  transition: opacity 0.15s;
+
+  &:hover {
+    opacity: 0.88;
+  }
+}
